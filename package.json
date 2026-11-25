@@ -1,0 +1,9 @@
+{
+  "name": "mnnchat-harmony",
+  "version": "1.0.0",
+  "description": "HarmonyOS Native AI Chat App powered by Alibaba MNN LLM Engine",
+  "main": "index.js",
+  "author": "HarmonyOS AI Developer",
+  "license": "Apache-2.0",
+  "dependencies": {}
+}

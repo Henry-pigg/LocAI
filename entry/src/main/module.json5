@@ -1,0 +1,61 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "phone"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    // 开启 ArkUI 沉浸光感（API 26+）：弹窗、Toast、Slider、底部悬浮页签栏默认使用系统材质。
+    // 设备不支持时由代码侧 uiMaterial.isImmersiveMaterialSupported() 与 apiAvailable 兜底降级。
+    "metadata": [
+      {
+        "name": "ohos.arkui.UIMaterial.state",
+        "value": "enable"
+      }
+    ],
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:app_icon",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:app_icon",
+        "startWindowBackground": "$color:start_window_background",
+        // 锁竖屏：单列聊天布局在横屏下避让区落在左右两侧，状态栏/挖孔会直接压住标题与内容，
+        // 且云测出现过 2832×1280 的横屏截图判了状态栏不通过，这里固定竖屏，横竖屏不再有歧义。
+        "orientation": "portrait",
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ]
+      }
+    ],
+    "requestPermissions": [
+      {
+        // 仅用于「在线拉取模型」：从魔搭 ModelScope 下载 GGUF/MNN 模型文件到应用私有目录。
+        // 推理过程全程在端侧完成，不上传任何对话内容。
+        "name": "ohos.permission.INTERNET",
+        "reason": "$string:perm_internet_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      }
+    ]
+  }
+}

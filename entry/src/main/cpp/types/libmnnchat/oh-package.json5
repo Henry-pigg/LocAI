@@ -1,0 +1,6 @@
+{
+  "name": "libmnnchat.so",
+  "types": "./index.d.ts",
+  "version": "1.0.0",
+  "description": "Alibaba MNN LLM Native NAPI module for HarmonyOS NEXT"
+}

@@ -1,0 +1,56 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "LocAI · 基于阿里 MNN 推理引擎的端侧离线 AI"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "LocAI"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "端侧离线 AI 对话"
+    },
+    {
+      "name": "perm_internet_reason",
+      "value": "在线拉取模型时访问魔搭 ModelScope 下载模型文件"
+    },
+    {
+      "name": "chat_title",
+      "value": "LocAI"
+    },
+    {
+      "name": "chat_subtitle_ready",
+      "value": "端侧本地离线运行 · 隐私安全保障"
+    },
+    {
+      "name": "chat_subtitle_unloaded",
+      "value": "未装载模型 · 到「模型管理」在线拉取"
+    },
+    {
+      "name": "chat_input_placeholder",
+      "value": "向 LocAI 提问，支持代码、推理解答..."
+    },
+    {
+      "name": "chat_send",
+      "value": "发送"
+    },
+    {
+      "name": "chat_stop",
+      "value": "停止生成"
+    },
+    {
+      "name": "chat_clear_confirm",
+      "value": "清空当前会话"
+    },
+    {
+      "name": "model_manage_title",
+      "value": "本地模型管理"
+    },
+    {
+      "name": "settings_title",
+      "value": "推理参数设置"
+    }
+  ]
+}

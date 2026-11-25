@@ -1,0 +1,10 @@
+{
+  "app": {
+    "bundleName": "com.henry.local",
+    "vendor": "Henry",
+    "versionCode": 1000002,
+    "versionName": "1.1.0",
+    "icon": "$media:app_icon",
+    "label": "$string:app_name"
+  }
+}

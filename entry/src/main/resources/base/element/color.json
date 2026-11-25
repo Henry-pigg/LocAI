@@ -1,0 +1,84 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#F4F5F7"
+    },
+    {
+      "name": "primary_accent",
+      "value": "#0A59F7"
+    },
+    {
+      "name": "primary_accent_hover",
+      "value": "#0047D6"
+    },
+    {
+      "name": "page_background",
+      "value": "#F1F3F5"
+    },
+    {
+      "name": "card_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "card_background_elevated",
+      "value": "#FAFAFB"
+    },
+    {
+      "name": "bubble_user_bg",
+      "value": "#0A59F7"
+    },
+    {
+      "name": "bubble_user_text",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "bubble_ai_bg",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "bubble_ai_border",
+      "value": "#E5E7EB"
+    },
+    {
+      "name": "text_primary",
+      "value": "#182431"
+    },
+    {
+      "name": "text_secondary",
+      "value": "#66182431"
+    },
+    {
+      "name": "text_tertiary",
+      "value": "#99182431"
+    },
+    {
+      "name": "status_success",
+      "value": "#00B578"
+    },
+    {
+      "name": "status_warning",
+      "value": "#FF8E00"
+    },
+    {
+      "name": "status_error",
+      "value": "#FA2A2D"
+    },
+    {
+      "name": "ai_thinking_bg",
+      "value": "#F5F3FF"
+    },
+    {
+      "name": "ai_thinking_accent",
+      "value": "#7052FF"
+    },
+    {
+      "name": "code_block_bg",
+      "value": "#282C34"
+    },
+    {
+      "name": "code_block_text",
+      "value": "#ABB2BF"
+    }
+  ]
+}

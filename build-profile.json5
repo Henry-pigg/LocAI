@@ -1,0 +1,61 @@
+{
+  "app": {
+    // 签名：使用 AGC 申请的发布证书（.cert/locai.p12 + LocAI.cer + LocAIRelease.p7b）。
+    // 该 profile 为 app_gallery 发布类型，bundle-name 绑定 com.henry.local。
+    // .cert 目录不入库（见 .gitignore），仓库里只有工程本身。
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        // compileSdkVersion 不在此显式配置：HarmonyOS 运行环境默认使用 DevEco Studio 自带 SDK（API 26）
+        "targetSdkVersion": "26.0.0",
+        // 向下兼容到 HarmonyOS 6.0.0 (API 20)，保证真机可安装
+        "compatibleSdkVersion": "6.0.0(20)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "release"
+      }
+    ],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "storeFile": "D:/my_project/my_project/locai_github/.cert/locai.p12",
+          "storePassword": "0000001B689CDDC58A94D941BA111B62D4B7A79E71E2D9B1D19856FA42F08B7E6E2FB47D3F4A19C338FFFC",
+          "keyAlias": "locaialias",
+          "keyPassword": "0000001BDD18BF722FB64E9A5D8749260C1B06EE9A9270E4F2C7727C4E1C2DE9057543DB6E26C050F80ACC",
+          "signAlg": "SHA256withECDSA",
+          "profile": "D:/my_project/my_project/locai_github/.cert/LocAIRelease.p7b",
+          "certpath": "D:/my_project/my_project/locai_github/.cert/LocAI.cer"
+        }
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="katex.min.css">
+  <script src="katex.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      color: #14161A;
+      -webkit-text-size-adjust: 100%;
+      overflow: hidden;
+    }
+    #w {
+      display: block;
+      padding: 0;
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.35;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    .katex-display {
+      margin: 0 !important;
+      text-align: left;
+    }
+    .katex {
+      font-size: 1.05em;
+    }
+  </style>
+</head>
+<body>
+  <div id="w"></div>
+  <script>
+    function render(src) {
+      var el = document.getElementById('w');
+      try {
+        katex.render(src, el, {
+          displayMode: true,
+          throwOnError: false,
+          strict: false,
+          output: 'html'
+        });
+      } catch (e) {
+        el.textContent = src;
+        el.style.fontFamily = 'monospace';
+      }
+      return document.body.scrollHeight;
+    }
+  </script>
+</body>
+</html>
