@@ -7,7 +7,7 @@ LocAI 把大模型完整跑在手机本地：装载模型后全程离线推理�
 - 包名：`com.henry.local`
 - 版本：`1.1.0`（versionCode 1000002）
 - 目标 SDK：HarmonyOS API 26，向下兼容 HarmonyOS 6.0.0（API 20）
-- 安装包：`dist/LocAI-1.1.0-signed.hap`（约 7.5 MB，不含模型；模型按需拉取）
+- 安装包：[Releases v1.1.0](https://github.com/Henry-pigg/LocAI/releases/tag/v1.1.0) → `LocAI-1.1.0-signed.hap`（约 7.5 MB，不含模型；模型按需拉取）
 
 ---
 
@@ -44,16 +44,16 @@ https://modelscope.cn/api/v1/models/{owner}/{repo}/repo?Revision=master&FilePath
 
 **方式一：直接装已签名包（推荐先试）**
 
-1. 手机开启「开发者模式」与「USB 调试」，用数据线连电脑，手机上允许调试授权；
-2. 电脑装好 DevEco Studio（自带 `hdc`），执行：
+1. 在 [Releases v1.1.0](https://github.com/Henry-pigg/LocAI/releases/tag/v1.1.0) 下载 `LocAI-1.1.0-signed.hap`，用 `SHA256SUMS.txt` 核对校验值；也可以直接用仓库 `dist/` 里的同名文件；
+2. 手机开启「开发者模式」与「USB 调试」，用数据线连电脑、允许调试授权；把 HAP 传到手机后在文件管理里点开安装，或电脑装好 DevEco Studio（自带 `hdc`）执行：
 
 ```powershell
 hdc list targets
-hdc install -r dist\LocAI-1.1.0-signed.hap
+hdc install -r LocAI-1.1.0-signed.hap
 hdc shell aa start -a EntryAbility -b com.henry.local
 ```
 
-`dist/` 里的包使用作者在 AGC 申请的**发布证书 + app_gallery 发布 Profile** 签名（有效期至 2029-11-22），签名链校验通过。如果系统提示签名与设备策略不符（部分机型会拦发布证书直装），改用方式二。
+发布包使用作者在 AGC 申请的**发布证书 + app_gallery 发布 Profile** 签名（有效期至 2029-11-22），签名链校验通过。如果系统提示签名与设备策略不符（部分机型会拦发布证书直装），改用方式二。
 
 **方式二：自己签名（最稳）**
 
