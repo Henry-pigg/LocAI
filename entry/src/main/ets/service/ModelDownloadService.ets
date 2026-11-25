@@ -162,7 +162,8 @@ export class ModelDownloadService {
           reject(err);
         });
       });
-      return true;
+      // 完成事件不等于文件真的落盘：再核一次大小，0 字节按失败处理
+      return this.fileSize(dest) > 0;
     } catch (err) {
       Logger.error(`downloadOne failed (${url}): ${JSON.stringify(err)}`);
       return false;
